@@ -75,3 +75,6 @@ print("helloworld")
 
 1 + 6 = c
 print (c)
+
+c = b - 1
+print (b)
