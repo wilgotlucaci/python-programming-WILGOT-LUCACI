@@ -71,3 +71,7 @@ distance = math.sqrt((q1 - p1)**2 + (q2 - p2)**2 + (q3 - p3)**2)
 print(distance)
 
 print("helloworld")
+
+
+1 + 6 = c
+print (c)
