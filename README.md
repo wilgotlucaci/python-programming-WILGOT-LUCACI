@@ -1,3 +1,3 @@
 # python-programmering-WILGOT-LUCACI
 
-Här kommer jag att lägga allt mitt arbeter på Iths.
+Här kommer jag att lägga allt mitt arbete på Iths.
