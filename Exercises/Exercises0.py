@@ -69,3 +69,6 @@ q = (q1, q2, q3)
 
 distance = math.sqrt((q1 - p1)**2 + (q2 - p2)**2 + (q3 - p3)**2)
 print(distance)
+
+
+#testar
