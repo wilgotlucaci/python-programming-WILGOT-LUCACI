@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 
 path1 = "//Users/wilgotlucaci/Desktop/Labb2/testpoints.txt" # Sätter en path för testpoints.txt filen
 path2 = "/Users/wilgotlucaci/Desktop/Labb2/datapoints.txt" #Sätter en path för datapoints.txt filen
@@ -40,11 +41,32 @@ for line in datapoints_lines[1:]:
 
 xs, ys = zip(*coordinates)
 
+for tp in testpoints:
+    min_distance = float("inf")
+    nearest_label = None
+    
+    for coord, lbl in zip(coordinates,type_figure):
+        distance = math.sqrt((tp[0] - coord[0])**2 + (tp[1] - coord[1])**2)
+        
+        if distance < min_distance:
+            min_distance = distance
+            nearest_label = lbl
+    if nearest_label > 0:
+       nearest_label = ("Pikachu")
+    else:
+        nearest_label = ("Pichu")
+
+    print("Testpoint", tp, "klassifieras som", nearest_label )
+
+
+
+
 
 plt.figure(dpi= 200)
-plt.scatter(xs,ys)
+plt.scatter(xs,ys, c = type_figure, cmap= "bwr", label = "Träningsdata")
 plt.title("Width x Length")
 plt.xlabel("Width")
 plt.ylabel("Height")
+plt.colorbar(label = "0 = Pichu, 1 = Pikachu ")
 plt.show()
 
