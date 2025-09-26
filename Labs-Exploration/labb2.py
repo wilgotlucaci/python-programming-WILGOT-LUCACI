@@ -1,3 +1,5 @@
+# Vill tlägga att jag tagit hjlp av både copliot och chat-gpt när jag kort fast eller fått ett error som jag inte fattat
+
 import matplotlib.pyplot as plt
 import math
 
