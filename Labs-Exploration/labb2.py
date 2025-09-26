@@ -52,7 +52,7 @@ nn = 10 #Nearest neighbor = 10
 for tp in testpoints:
     distances = []
     
-    # Beräknar euklidiskt avständ mellan tespunkt tp och träningspunkterna coord
+    # Beräknar euklidiskt avstånd mellan tespunkt tp och träningspunkterna coord
     
     for coord, lbl in zip(coordinates,type_figure):
         d = math.sqrt((tp[0] - coord[0])**2 + (tp[1] - coord[1])**2)
@@ -99,7 +99,7 @@ while True:
         else:
             nn = 10
 
-            # Beräknar euklidiskt avständ mellan user input ui och träningspunkterna coord.
+            # Beräknar euklidiskt avstånd mellan user input ui och träningspunkterna coord.
 
             distances = []
             for coord, lbl in zip(coordinates, type_figure):
