@@ -12,11 +12,12 @@ data = np.genfromtxt(
 x = data[:, 0].astype(float)
 y = data[:, 1].astype(float)
 
-x1, y1 = x[0], y[0]
-x2, y2 = x[-1], y[-1]
+#x1, y1 = x[0], y[0]
+#x2, y2 = x[-1], y[-1]
 
-k = (y2 - y1) / (x2 - x1)
-m = y1 - k * x1
+#k = (y2 - y1) / (x2 - x1)
+#m = y1 - k * x1
+k, m = np.polyfit(x, y, 1)
 
 line_x = np.linspace(min(x), max(x), 100)
 line_y = k * line_x + m
@@ -33,13 +34,13 @@ def classify(x_point, y_point):
 classifications = [classify (x[i], y[i]) for i in range(len(x))]
 
 
-above = 0
-under = 0
-for c in classifications:
-    if c == "1":
-        above += 1
-    elif c == "0":
-        under += 1
+#above = 0
+#under = 0
+#for c in classifications:
+    #if c == "1":
+        #above += 1
+    #elif c == "0":
+        #under += 1
 
 labelleddata = os.path.join(path, "labelled_data.csv")
 with open(labelleddata, "w") as s:
