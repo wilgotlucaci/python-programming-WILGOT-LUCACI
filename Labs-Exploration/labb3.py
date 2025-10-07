@@ -44,8 +44,6 @@ with open(labelleddata, "w") as s:
 print("Writing labelled data to labelled_data.csv file")
 
 
-
-
 f_x = -0.489 * line_x
 g_x = -2 * line_x + 0.16
 h_x = 800 * line_x -120
